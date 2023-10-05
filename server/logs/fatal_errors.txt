@@ -1,0 +1,30 @@
+
+-------------- Fatal Error -------------
+Trace ID: FE_1696523278338
+Date: 2023-10-05 18:27:58
+Request type: GET
+Request: {"controller":"Login_Controller","method":"validateUserLogin","params":{"username":"user1","password":"user1"}}
+Error Message: Uncaught TypeError: Session::getLoggedUserId(): Return value must be of type array, int returned in E:\GitHub\butchery\server\classes\Session.php:41
+Stack trace:
+#0 E:\GitHub\butchery\server\controllers\Login_Controller.php(63): Session->getLoggedUserId()
+#1 E:\GitHub\butchery\server\classes\Application.php(50): Login_Controller->validateUserLogin()
+#2 E:\GitHub\butchery\server\index.php(43): Application->execute()
+#3 {main}
+  thrown in E:\GitHub\butchery\server\classes\Session.php on line 41
+Error File: E:\GitHub\butchery\server\classes\Session.php(41)
+----------------------------------------
+
+-------------- Fatal Error -------------
+Trace ID: FE_1696523294655
+Date: 2023-10-05 18:28:14
+Request type: GET
+Request: {"controller":"Login_Controller","method":"validateUserLogin","params":{"username":"user1","password":"user1"}}
+Error Message: Uncaught TypeError: Session::getLoggedUserId(): Return value must be of type array, int returned in E:\GitHub\butchery\server\classes\Session.php:41
+Stack trace:
+#0 E:\GitHub\butchery\server\controllers\Login_Controller.php(63): Session->getLoggedUserId()
+#1 E:\GitHub\butchery\server\classes\Application.php(50): Login_Controller->validateUserLogin()
+#2 E:\GitHub\butchery\server\index.php(43): Application->execute()
+#3 {main}
+  thrown in E:\GitHub\butchery\server\classes\Session.php on line 41
+Error File: E:\GitHub\butchery\server\classes\Session.php(41)
+----------------------------------------

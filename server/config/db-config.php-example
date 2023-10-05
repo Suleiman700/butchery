@@ -1,0 +1,14 @@
+<?php
+if (!isset($_SESSION)) {
+    $lifetime=36000;
+    session_set_cookie_params($lifetime);
+    session_start();
+}
+
+$db_host = 'XXXXXXXXXXX';
+$db_user = 'root';
+$db_pass = 'root';
+$db_name = 'XXXXX';
+
+// Try and connect using the info above.
+$conn = new mysqli($db_host, $db_user, $db_pass, $db_name);

@@ -1,0 +1,30 @@
+
+--------------- Error -------------
+Trace ID: 1696523045873
+Date: 05/10/2023 18:24:05
+Error text:Missing username Parameter
+Request type: GET
+{"controller":"Login_Controller","method":"validateUserLogin","params":{"username2":"soleman630@gmail.com","password2":"admin"}}
+Error:
+details: "Missing param: username"
+-----------------------------------
+
+--------------- Error -------------
+Trace ID: 1696523175690
+Date: 05/10/2023 18:26:15
+Error text:Missing username Parameter
+Request type: GET
+{"controller":"Login_Controller","method":"validateUserLogin","params":{"username2":"user1","password2":"user1"}}
+Error:
+details: "Missing param: username"
+-----------------------------------
+
+--------------- Error -------------
+Trace ID: 1696523341376
+Date: 05/10/2023 18:29:01
+Error text:Wrong username or password
+Request type: GET
+{"controller":"Login_Controller","method":"validateUserLogin","params":{"username":"echo '<\/pre>';","password":"echo '<\/pre>';"}}
+Error:
+details: "No user found in database by given username: echo '<\/pre>';"
+-----------------------------------
