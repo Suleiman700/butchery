@@ -11,10 +11,7 @@ require_once '../assets/includes/page-head.php';
 ?>
 
 <body class="radial-gradient">
-    <div class="container" id="views">
-        <div id="single-view"></div>
-        <div id="multiple-views"></div>
-    </div>
+    <div class="container page-wrapper min-vh-100" id="views"></div>
 
 
     <?php

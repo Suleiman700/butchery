@@ -1,20 +1,23 @@
 
 export default class SheepView_InitScan {
 
-    pageSettings = {
+    app = undefined
+
+    viewSettings = {
         title: 'סריקה ראשונה',
         showChangeJobBtn: true,
         showChangeAccountBtn: true
     }
 
-    constructor() {
+    constructor(_app) {
+        this.app = _app
     }
 
     async html() {
         const parent = document.createElement('div')
         parent.innerHTML = `
-            <div class="page-wrapper" id="main-wrapper">
-                <div class="position-relative overflow-hidden min-vh-100 d-flex align-items-center justify-content-center">
+            <div id="main-wrapper">
+                <div class="position-relative overflow-hidden d-flex align-items-center justify-content-center">
                     <div class="d-flex align-items-center justify-content-center w-100">
                         <div class="w-100">
                             <div class="row d-flex justify-content-center text-center">
@@ -57,7 +60,6 @@ export default class SheepView_InitScan {
                             </div>
                             <div class="row d-flex justify-content-center my-3">
                                 <div class="col-md-8 col-lg-6 text-center" id="view-footer">
-                                    <hr />
                                 </div>
                             </div>
                         </div>

@@ -1,9 +1,9 @@
 
 export default class View_JobSelection {
 
-    pageSettings = {
-        title: 'Job Selection',
-        showChangeJobBtn: false,
+    viewSettings = {
+        title: 'סוג עבודה',
+        showChangeJobBtn: true,
         showChangeAccountBtn: true
     }
 
@@ -63,6 +63,7 @@ export default class View_JobSelection {
                             <div class="row d-flex justify-content-center">
                                 <div class="col-md-8 col-lg-6 text-center" id="view-footer">
                                     <hr />
+                                    <button class="btn btn-outline-primary" id="btn-logout">שינוי משתמש</button>
                                 </div>
                             </div>
                         </div>
