@@ -12,6 +12,7 @@ export default class SheepView {
         const parent = document.createElement('div')
 
         const header = document.createElement('div')
+        header.id = 'view-header'
         header.innerHTML = `
             <div class="row d-flex justify-content-center pt-3">
                 <div class="col-12 text-center">
@@ -19,13 +20,13 @@ export default class SheepView {
                         <img src="../assets/images/icons/sheep.png" width="100" alt="">
                     </div>
                     <p class="text-muted">Sheeps</p>
-                    <div id="view-header"></div>
+                    <div id="view-buttons"></div>
                 </div>
             </div>
             <hr />
         `
-
         parent.appendChild(header)
+
         if (this.views.length > 1) {
             parent.appendChild(await this.generateTabs(this.views))
         }
@@ -35,7 +36,6 @@ export default class SheepView {
 
         // Set view settings from the first view
         this.viewSettings.title = this.views[0].viewSettings.title
-
 
         return parent
     }

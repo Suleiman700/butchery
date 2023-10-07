@@ -23,7 +23,7 @@ require_once '../assets/includes/page-head.php';
         import App from './app/App.js';
         const AppInstance = new App();
 
-        AppInstance.setCurrentView('jobSelection');
+        AppInstance.setCurrentView('sheep.stationTwo');
         AppInstance.renderView()
     </script>
 

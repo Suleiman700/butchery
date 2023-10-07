@@ -38,7 +38,7 @@ export default class SheepView_StationSelection {
                                                                 <img class="card-img img-fluid-top p-2" src="../assets/images/icons/factory.png" style="width: 100px;" alt="...">
                                                             </div>
                                                             <div class="card-body">
-                                                                <h5 class="card-title">Station One</h5>
+                                                                <h5 class="card-title">תחנה 1</h5>
                                                                 <button class="btn btn-primary mt-3 stationSelection" data-view="sheep.stationOne">בחר תחנה</button>
                                                             </div>
                                                         </div>
@@ -49,7 +49,7 @@ export default class SheepView_StationSelection {
                                                                 <img class="card-img img-fluid-top p-2" src="../assets/images/icons/factory.png" style="width: 100px;" alt="...">
                                                             </div>
                                                             <div class="card-body">
-                                                                <h5 class="card-title">Station Two</h5>
+                                                                <h5 class="card-title">תחנה 2</h5>
                                                                 <button class="btn btn-primary mt-3 stationSelection" data-view="sheep.stationTwo">בחר תחנה</button>
                                                             </div>
                                                         </div>
@@ -60,7 +60,7 @@ export default class SheepView_StationSelection {
                                                                 <img class="card-img img-fluid-top p-2" src="../assets/images/icons/factory.png" style="width: 100px;" alt="...">
                                                             </div>
                                                             <div class="card-body">
-                                                                <h5 class="card-title">Station Three</h5>
+                                                                <h5 class="card-title">תחנה 3</h5>
                                                                 <button class="btn btn-primary mt-3 stationSelection" data-view="sheep.stationThree">בחר תחנה</button>
                                                             </div>
                                                         </div>
@@ -71,7 +71,7 @@ export default class SheepView_StationSelection {
                                                                 <img class="card-img img-fluid-top p-2" src="../assets/images/icons/factory.png" style="width: 100px;" alt="...">
                                                             </div>
                                                             <div class="card-body">
-                                                                <h5 class="card-title">Station Four</h5>
+                                                                <h5 class="card-title">תחנה 4</h5>
                                                                 <button class="btn btn-primary mt-3 stationSelection" data-view="sheep.stationFour">בחר תחנה</button>
                                                             </div>
                                                         </div>
@@ -82,7 +82,7 @@ export default class SheepView_StationSelection {
                                                                 <img class="card-img img-fluid-top p-2" src="../assets/images/icons/factory.png" style="width: 100px;" alt="...">
                                                             </div>
                                                             <div class="card-body">
-                                                                <h5 class="card-title">Station Five</h5>
+                                                                <h5 class="card-title">תחנה 5</h5>
                                                                 <button class="btn btn-primary mt-3 stationSelection" data-view="sheep.stationFive">בחר תחנה</button>
                                                             </div>
                                                         </div>

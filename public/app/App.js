@@ -4,7 +4,8 @@ import View_JobSelection from './views/View_JobSelection.js';
 
 import SheepView from './views/sheep_views/SheepView.js';
 import SheepView_StationSelection from './views/sheep_views/SheepView_StationSelection.js';
-import SheepView_InitScan from './views/sheep_views/SheepView_InitScan.js';
+import SheepView_StationOne from './views/sheep_views/SheepView_StationOne.js';
+import SheepView_StationTwo from './views/sheep_views/SheepView_StationTwo.js';
 
 export default class App {
     #currentView = null;
@@ -12,11 +13,15 @@ export default class App {
         jobSelection: new View_JobSelection(this),
         sheepStationSelection: new SheepView_StationSelection(this),
         sheep: {
-            stationOne: new SheepView([new SheepView_InitScan(this)]),
+            stationOne: new SheepView([new SheepView_StationOne(this)]),
+            stationTwo: new SheepView([new SheepView_StationTwo(this)]),
         },
         cow: {
             stationOne: new Sheep([]),
         }
+    }
+    settings = {
+        enableDeveloperTools: true
     }
 
     constructor() {}
@@ -29,7 +34,11 @@ export default class App {
 
             for (const key of viewKeys) {
                 if (currentView[key] === undefined) {
-                    throw new Error(`View #${_viewString} does not exist`);
+                    Swal.fire({
+                        icon: 'error',
+                        title: `View [${_viewString}] does not exist`,
+                    })
+                    throw new Error(`View [${_viewString}] does not exist`);
                 }
                 currentView = currentView[key];
             }
@@ -62,7 +71,7 @@ export default class App {
             btnChangeJob.className = 'btn btn-outline-primary mx-2'
             btnChangeJob.id = 'btn-change-job'
             btnChangeJob.textContent = 'שינוי סוג עבודה'
-            document.querySelector('#view-header').appendChild(btnChangeJob)
+            document.querySelector('#view-buttons').appendChild(btnChangeJob)
 
             btnChangeJob.addEventListener('click', () => {
                 Swal.fire({
@@ -87,7 +96,7 @@ export default class App {
             btnChangeJob.className = 'btn btn-outline-primary mx-2'
             btnChangeJob.id = 'btn-change-job'
             btnChangeJob.textContent = 'שינוי משתמש'
-            document.querySelector('#view-header').appendChild(btnChangeJob)
+            document.querySelector('#view-buttons').appendChild(btnChangeJob)
 
             btnChangeJob.addEventListener('click', () => {
                 Swal.fire({
