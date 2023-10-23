@@ -1,6 +1,6 @@
 export default class SheepView_StationSelection {
 
-    pageSettings = {
+    viewSettings = {
         title: 'בחיר תחנה',
         showChangeJobBtn: true,
         showChangeAccountBtn: true

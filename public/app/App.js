@@ -8,12 +8,13 @@ import SheepView_StationOne from './views/sheep_views/SheepView_StationOne.js';
 import SheepView_StationTwo from './views/sheep_views/SheepView_StationTwo.js';
 
 export default class App {
+    #appContainerHTMLElement = null;
     #currentView = null;
     views = {
         jobSelection: new View_JobSelection(this),
         sheepStationSelection: new SheepView_StationSelection(this),
         sheep: {
-            stationOne: new SheepView([new SheepView_StationOne(this)]),
+            stationOne: new SheepView([new SheepView_StationOne(this), new SheepView_StationTwo(this)]),
             stationTwo: new SheepView([new SheepView_StationTwo(this)]),
         },
         cow: {
@@ -25,6 +26,18 @@ export default class App {
     }
 
     constructor() {}
+
+    /**
+     * Set app container to be rendered inside a specific HTML element
+     * @param _targetHTMLElement {HTMLElement}
+     */
+    setAppContainer(_targetHTMLElement) {
+        this.#appContainerHTMLElement = _targetHTMLElement
+        if (!this.isValidAppContainer()) {
+            this.#appContainerHTMLElement = null
+            alert('Invalid App Container')
+        }
+    }
 
     setCurrentView(_viewString) {
         let currentView = this.views;
@@ -54,13 +67,20 @@ export default class App {
     }
 
     async renderView() {
+        if (!this.isValidAppContainer()) {
+            alert('Invalid App Container')
+            return
+        }
+
+        const appContainer = this.#appContainerHTMLElement
+
         // Remove rendered views from DOM
-        document.querySelector('#views').innerHTML = ''
+        appContainer.innerHTML = ''
 
         const view = this.#currentView
 
         // Add view to DOM
-        document.querySelector('#views').appendChild(await view.html())
+        appContainer.appendChild(await view.html())
 
         // Set page title
         document.title = view.viewSettings.title
@@ -112,6 +132,19 @@ export default class App {
                     }
                 })
             })
+        }
+    }
+
+    /**
+     * Check if valid app container
+     * @return {boolean}
+     */
+    isValidAppContainer() {
+        if (this.#appContainerHTMLElement instanceof HTMLElement) {
+            return true
+        }
+        else {
+            return false
         }
     }
 }

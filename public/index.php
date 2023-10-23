@@ -11,7 +11,7 @@ require_once '../assets/includes/page-head.php';
 ?>
 
 <body class="radial-gradient">
-    <div class="container page-wrapper min-vh-100" id="views"></div>
+    <div class="container page-wrapper min-vh-100" id="app-container"></div>
 
 
     <?php
@@ -23,7 +23,8 @@ require_once '../assets/includes/page-head.php';
         import App from './app/App.js';
         const AppInstance = new App();
 
-        AppInstance.setCurrentView('sheep.stationTwo');
+        AppInstance.setAppContainer(document.querySelector('#app-container'))
+        AppInstance.setCurrentView('jobSelection');
         AppInstance.renderView()
     </script>
 
